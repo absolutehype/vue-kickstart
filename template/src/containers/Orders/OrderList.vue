@@ -1,6 +1,27 @@
 <template>
 	<DefaultLayout>
-		Order List
+		<table class="table table-hover">
+			<thead>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>Bob</td>
+				<td>Marley</td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>Marley</td>
+			</tr>
+			<tr>
+				<td>Bob</td>
+				<td>Marley</td>
+			</tr>
+			</tbody>
+		</table>
 	</DefaultLayout>
 </template>
 
