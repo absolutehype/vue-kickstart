@@ -7,48 +7,45 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    browser: true,
+    browser: true
   },
-  {{#if_eq lintConfig "standard"}}
-  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
-  extends: 'standard',
-  {{/if_eq}}
-  {{#if_eq lintConfig "airbnb"}}
   extends: 'airbnb-base',
-  {{/if_eq}}
   // required to lint *.vue files
   plugins: [
     'html'
   ],
-  {{#if_eq lintConfig "airbnb"}}
   // check if imports actually resolve
-  'settings': {
+  settings: {
     'import/resolver': {
-      'webpack': {
-        'config': 'build/webpack.base.conf.js'
+      webpack: {
+        config: 'build/webpack.base.conf.js'
       }
     }
   },
-  {{/if_eq}}
   // add your custom rules here
-  'rules': {
-    {{#if_eq lintConfig "standard"}}
-    // allow paren-less arrow functions
-    'arrow-parens': 0,
-    // allow async-await
-    'generator-star-spacing': 0,
-    {{/if_eq}}
-    {{#if_eq lintConfig "airbnb"}}
+  rules: {
+
+    'comma-dangle': [2, 'never'],
+    'arrow-parens': [2, 'as-needed'],
+    'linebreak-style': 0,
+    'padded-blocks': 0,
+    indent: [1, 'tab'],
+    'no-underscore-dangle': [2, {allow: ['_id', '__v']}],
+    'no-param-reassign': [2, {props: false}],
+    'new-cap': [2, {capIsNewExceptions: ['Router', 'ObjectId']}],
+    'no-tabs': 0,
+    'max-len': [1, 120], // extended
+    'no-plusplus': 0, // disabled
+
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
-      'js': 'never',
-      'vue': 'never'
+      js: 'never',
+      vue: 'never'
     }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
-      'optionalDependencies': ['test/unit/index.js']
+      optionalDependencies: ['test/unit/index.js']
     }],
-    {{/if_eq}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
