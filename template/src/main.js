@@ -3,6 +3,8 @@ import OfsMenu from '@oneflow/ofs-vue-layout';
 import store from './vuex';
 import router, { menuStructure } from './router';
 import App from './App';
+import './assets/style/_index.scss';
+import './assets/style/app.css';
 
 Vue.config.productionTip = false;
 Vue.use(OfsMenu, { router, store, menu: menuStructure });
