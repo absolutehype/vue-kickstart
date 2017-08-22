@@ -26,11 +26,18 @@
 </template>
 
 <script type="text/javascript">
+	import { mapActions } from 'vuex';
 	import DefaultLayout from '../../components/DefaultLayout';
 
 	export default {
 		components: {
 			DefaultLayout
+		},
+		mounted() {
+			this.find();
+		},
+		methods: {
+			...mapActions('order', ['find'])
 		}
 	};
 </script>

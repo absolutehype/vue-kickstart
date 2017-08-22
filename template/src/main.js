@@ -10,6 +10,7 @@ Vue.config.productionTip = false;
 Vue.use(OfsMenu, { router, store, menu: menuStructure });
 
 
+// Dynamic menu update, example:
 store.dispatch('menu/updateMenu', {
 	path: '0.items.0.items',
 	content: [{ name: 'orders.add', title: 'Added dynamically' }],

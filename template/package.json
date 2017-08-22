@@ -14,6 +14,7 @@
 	},
 	"dependencies": {
 		"@oneflow/ofs-vue-layout": "1.1.12",
+		"@oneflow/ofs-vuex-crud": "file:../ofs-vuex-crud",
 		"bootstrap-sass": "3.3.7",
 		"vue": "^2.3.3",
 		"vue-router": "^2.3.1",
