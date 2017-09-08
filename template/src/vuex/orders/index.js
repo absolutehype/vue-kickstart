@@ -2,9 +2,9 @@ import Vue from 'vue';
 import httpProviderInstance from '../httpProviderInstance';
 
 export default function () {
+	Vue.$ofsCrud.registerTransport({ name: 'http', fn: () => httpProviderInstance });
 	Vue.$ofsCrud.addResource({
 		name: 'order',
-		provider: () => httpProviderInstance,
 		options: { namespaced: true }
 	});
 }

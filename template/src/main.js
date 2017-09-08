@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import OfsMenu from '@oneflow/ofs-vue-layout';
+import '@oneflow/ofs-vue-layout/dist/index.css';
 import store from './vuex';
 import router, { menuStructure } from './router';
 import App from './App';
