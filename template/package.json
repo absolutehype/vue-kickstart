@@ -13,7 +13,7 @@
 		"lint": "eslint --ext .js,.vue src test/unit/specs"
 	},
 	"dependencies": {
-		"@oneflow/ofs-vue-layout": "1.1.21",
+		"@oneflow/ofs-vue-layout": "1.1.22",
 		"@oneflow/ofs-vuex-crud": "0.0.6",
 		"vue": "2.4.2",
 		"vue-router": "^2.3.1",
