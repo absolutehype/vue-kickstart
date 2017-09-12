@@ -1,5 +1,6 @@
 import Home from './Home';
 import HpModePage from './HpModePage';
+import NewPage from './NewPage';
 
 const routes = [
 	{
@@ -17,6 +18,11 @@ const routes = [
 				name: 'hpModePage',
 				path: '/hpModePage',
 				component: HpModePage
+			},
+			{
+				name: 'newPage',
+				path: '/new-page',
+				component: NewPage
 			}
 		]
 	}

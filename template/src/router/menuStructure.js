@@ -1,7 +1,6 @@
 const menuStructure = [
 	{
 		title: 'Analytics',
-		name: 'app',
 		items: [
 			{
 				title: 'Home Group',
@@ -14,12 +13,11 @@ const menuStructure = [
 	},
 	{
 		title: 'Orders',
-		name: 'orders',
 		items: [
 			{
 				title: 'Orders',
 				items: [
-					{ title: 'List', name: 'orders.list', default: true },
+					{ title: 'List', name: 'orders.list' },
 					{ title: 'Add', name: 'orders.add' }
 				]
 			}
