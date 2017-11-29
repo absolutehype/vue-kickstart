@@ -13,6 +13,7 @@ const routes = [
 				component: List
 			},
 			{
+				title: 'Create new Order',
 				name: 'orders.add',
 				path: 'add',
 				component: Add
