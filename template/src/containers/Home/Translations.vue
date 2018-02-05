@@ -21,13 +21,17 @@
 
 
 <script>
+	import { mapActions } from 'vuex';
 	import { ContentHeader } from '@oneflow/ofs-vue-layout';
 	import DefaultLayout from '../../components/DefaultLayout';
 
+
 	export default {
 		methods: {
+			...mapActions(['setLanguage']),
 			pickLang(language) {
 				this.$i18n.locale = language;
+				this.setLanguage({ language });
 			},
 			displayError() {
 				const errorMessage = this.$i18n.t('errorMessage');
