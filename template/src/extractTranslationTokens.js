@@ -77,10 +77,11 @@ function main(directory) {
 	processDir(directory);
 
 	let totalCount = 0;
-	let jsonObject = { tokens: [] };
+	let jsonObject = {};
 	Object.keys(tokenHash).forEach(key => {
-		if (jsonObject.tokens.indexOf(tokenHash[key].token) === -1) {
-			jsonObject.tokens.push(tokenHash[key].token);
+		const newToken = tokenHash[key].token;
+		if (!jsonObject[newToken]) {
+			jsonObject[newToken] = newToken;
 		}
 		totalCount += tokenHash[key].count;
 	});
