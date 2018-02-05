@@ -32,8 +32,7 @@
 			displayError() {
 				const errorMessage = this.$i18n.t('errorMessage');
 				const errorTitle = this.$i18n.t('errorTitle');
-				window.alert(`${errorTitle}: ${errorTitle}`);
-				this.$notify({ type: 'error', text: errorMessage, title: errorTitle });
+				window.alert(`${errorTitle}: ${errorMessage}`);
 			}
 		},
 		components: {
@@ -43,12 +42,3 @@
 	};
 
 </script>
-
-<style lang="scss">
-	.Translations {
-		&-ButtonLink {
-			padding: 0;
-			vertical-align: unset;
-		}
-	}
-</style>
