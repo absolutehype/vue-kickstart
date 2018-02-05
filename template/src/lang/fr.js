@@ -1,5 +1,5 @@
 module.exports = {
-	greeting: 'Bonjour',
-	errorMessage: 'Quelque chose s\'est mal passé',
-	errorTitle: 'Erreur'
+	'Currency': 'Bonjour',
+	'active': 'Quelque chose s\'est mal passé',
+	'error': 'Erreur'
 };

@@ -3,9 +3,9 @@
 		<ContentHeader title="Translations">
 		</ContentHeader>
 		<b-container fluid class="p-3">
-			<p>Using $t function:<b> {{ $t('greeting') }}</b></p>
+			<p>Using $t function:<b> {{ $t('Currency') }}</b></p>
 			Using v-t directive:
-			<b><span v-t="'greeting'"></span></b>
+			<b><span v-t="'Currency'"></span></b>
 			<br>
 			<br>
 			<b-dropdown id="ddown1" text="Select language" class="m-md-2">
@@ -31,19 +31,12 @@
 		methods: {
 			...mapActions(['setLanguage']),
 			pickLang(language) {
-				axios.get('https://s3-eu-west-1.amazonaws.com/oneflow-public/locales/production/en-GB.json')
-					.then(function (response) {
-						console.log(response.data);
-					})
-					.catch(function (error) {
-						console.log(error);
-					});
 				this.$i18n.locale = language;
 				this.setLanguage({ language });
 			},
 			displayError() {
-				const errorMessage = this.$i18n.t('errorMessage');
-				const errorTitle = this.$i18n.t('errorTitle');
+				const errorMessage = this.$i18n.t('active');
+				const errorTitle = this.$i18n.t('error');
 				window.alert(`${errorTitle}: ${errorMessage}`);
 			}
 		},

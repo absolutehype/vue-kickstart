@@ -1,5 +1,5 @@
 module.exports = {
-	greeting: '你好',
-	errorMessage: '出了些问题',
-	errorTitle: '错误'
+	'Currency': '你好',
+	'active': '出了些问题',
+	'error': '错误'
 };
