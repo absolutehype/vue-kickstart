@@ -6,6 +6,7 @@ var ora = require('ora')
 var rm = require('rimraf')
 var path = require('path')
 var chalk = require('chalk')
+const exec = require('child_process').exec;
 var webpack = require('webpack')
 var config = require('../config')
 var webpackConfig = require('./webpack.prod.conf')
@@ -32,4 +33,7 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
       '  Opening index.html over file:// won\'t work.\n'
     ))
   })
+// Extract translation tokens
+exec('node ./src/extractTranslateTokens.js > ./tokens/tokens.json');
+
 })

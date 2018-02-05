@@ -6,7 +6,8 @@ const menuStructure = [
 				title: 'Home Group',
 				items: [
 					{ title: 'Home', name: 'home' },
-					{ title: 'Hp mode', name: 'hpModePage' }
+					{ title: 'Hp mode', name: 'hpModePage' },
+					{ title: 'Translations', name: 'translations' }
 				]
 			}
 		]

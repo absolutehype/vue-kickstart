@@ -16,7 +16,8 @@
 		"@oneflow/ofs-vue-layout": "1.1.29",
 		"@oneflow/ofs-vuex-crud": "1.0.3",
 		"bootstrap-vue": "1.2.0",
-		"vue": "2.5.9",
+		"vue": "2.5.13",
+		"vue-i18n": "7.4.2",
 		"vue-router": "3.0.1",
 		"vuex": "3.0.1"
 	},
