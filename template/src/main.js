@@ -6,6 +6,7 @@ import VueI18n from 'vue-i18n';
 import store from './vuex';
 import router, { menuStructure } from './router';
 import App from './App';
+import messages from './lang/index';
 
 Vue.config.productionTip = false;
 Vue.use(OfsMenu, { router, store, menu: menuStructure });
@@ -19,31 +20,9 @@ store.dispatch('menu/updateMenu', {
 	updateMethod: 'concat'
 });
 
-const messages = {
-	en: {
-		greeting: 'Hello',
-		errorMessage: 'Something went wrong',
-		errorTitle: 'Error'
-	},
-	es: {
-		greeting: 'Hola',
-		errorMessage: 'Algo salió mal',
-		errorTitle: 'Error'
-	},
-	fr: {
-		greeting: 'Bonjour',
-		errorMessage: 'Quelque chose s\'est mal passé',
-		errorTitle: 'Erreur'
-	},
-	ch: {
-		greeting: '你好',
-		errorMessage: '出了些问题',
-		errorTitle: '错误'
-	}
-};
 
 const i18n = new VueI18n({
-	locale: 'fr', // set locale
+	locale: 'en', // set locale
 	messages
 });
 

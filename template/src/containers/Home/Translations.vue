@@ -22,6 +22,7 @@
 
 <script>
 	import { mapActions } from 'vuex';
+	import axios from 'axios';
 	import { ContentHeader } from '@oneflow/ofs-vue-layout';
 	import DefaultLayout from '../../components/DefaultLayout';
 
@@ -30,6 +31,13 @@
 		methods: {
 			...mapActions(['setLanguage']),
 			pickLang(language) {
+				axios.get('https://s3-eu-west-1.amazonaws.com/oneflow-public/locales/production/en-GB.json')
+					.then(function (response) {
+						console.log(response.data);
+					})
+					.catch(function (error) {
+						console.log(error);
+					});
 				this.$i18n.locale = language;
 				this.setLanguage({ language });
 			},
