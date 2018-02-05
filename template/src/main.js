@@ -20,28 +20,27 @@ store.dispatch('menu/updateMenu', {
 });
 
 const messages = {
-		en: {
-			greeting: 'Hello',
-			errorMessage: 'Something went wrong',
-			errorTitle: 'Error'
-		},
-		es: {
-			greeting: 'Hola',
-			errorMessage: 'Algo salió mal',
-			errorTitle: 'Error'
-		},
-		fr: {
-			greeting: 'Bonjour',
-			errorMessage: 'Quelque chose s\'est mal passé',
-			errorTitle: 'Erreur'
-		},
-		ch: {
-			greeting: '你好',
-			errorMessage: '出了些问题',
-			errorTitle: '错误'
-		}
+	en: {
+		greeting: 'Hello',
+		errorMessage: 'Something went wrong',
+		errorTitle: 'Error'
+	},
+	es: {
+		greeting: 'Hola',
+		errorMessage: 'Algo salió mal',
+		errorTitle: 'Error'
+	},
+	fr: {
+		greeting: 'Bonjour',
+		errorMessage: 'Quelque chose s\'est mal passé',
+		errorTitle: 'Erreur'
+	},
+	ch: {
+		greeting: '你好',
+		errorMessage: '出了些问题',
+		errorTitle: '错误'
 	}
-;
+};
 
 const i18n = new VueI18n({
 	locale: 'fr', // set locale

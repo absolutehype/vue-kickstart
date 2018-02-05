@@ -34,6 +34,6 @@ rm(path.join(config.build.assetsRoot, config.build.assetsSubDirectory), err => {
     ))
   })
 // Extract translation tokens
-exec('node ./src/extractTranslateTokens.js > ./tokens/tokens.json');
+	exec('node ./src/extractTranslationTokens.js > ./tokens/tokens.json');
 
 })
