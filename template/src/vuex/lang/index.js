@@ -4,7 +4,7 @@ import * as getters from './getters';
 
 export default function (store, $i18n) {
 	const state = {
-		lang: 'en',
+		lang: JSON.parse(window.localStorage.getItem('vuex')).lang.lang || 'en-GB',
 		tokens: []
 	};
 

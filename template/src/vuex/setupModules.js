@@ -4,6 +4,7 @@ import httpProviderInstance from './httpProviderInstance';
 import registerOrdersModule from './orders';
 import registerLangStoreModule from './lang';
 
+
 const setupModules = (store, i18n) => {
 	Vue.use(OfsCrud, { store });
 	Vue.$ofsCrud.registerTransport({ name: 'http', fn: () => httpProviderInstance });

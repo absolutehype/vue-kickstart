@@ -12,7 +12,7 @@
 			this.setLanguage({ lang: this.lang });
 		},
 		methods: {
-			...mapActions(['setLanguage', 'getLanguage'])
+			...mapActions('lang', ['setLanguage'])
 		},
 		computed: {
 			...mapGetters({
