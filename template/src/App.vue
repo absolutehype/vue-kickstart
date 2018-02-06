@@ -9,21 +9,22 @@
 
 	export default {
 		created() {
-			this.getLanguage();
-			const lang = this.$store.state.lang.lang;
+			const lang = this.getLanguage;
 			this.setLanguage({ lang }).then(() => {
 				this.$i18n.locale = lang;
-				this.$i18n.setLocaleMessage(lang, this.$store.state.lang.tokens);
+				this.$i18n.setLocaleMessage(lang, this.getTokens);
 				document.querySelector('html').setAttribute('lang', lang);
 			});
 		},
 		methods: {
-			...mapActions(['setLanguage', 'getLanguage'])
+			...mapActions(['setLanguage'])
 		},
 		computed: {
 			...mapGetters({
 				activeTopItem: 'menu/activeTopItem',
-				activeSubmenu: 'menu/activeSubmenu'
+				activeSubmenu: 'menu/activeSubmenu',
+				getLanguage: 'getLanguage',
+				getTokens: 'getTokens'
 			})
 		}
 	};

@@ -27,7 +27,7 @@
 
 
 <script>
-	import { mapActions } from 'vuex';
+	import { mapActions, mapGetters } from 'vuex';
 	import { ContentHeader } from '@oneflow/ofs-vue-layout';
 	import DefaultLayout from '../../components/DefaultLayout';
 
@@ -38,7 +38,7 @@
 			pickLang(lang) {
 				return this.setLanguage({ lang }).then(() => {
 					this.$i18n.locale = lang;
-					this.$i18n.setLocaleMessage(lang, this.$store.state.lang.tokens);
+					this.$i18n.setLocaleMessage(lang, this.getTokens);
 					document.querySelector('html').setAttribute('lang', lang);
 
 				});
@@ -52,6 +52,11 @@
 		components: {
 			ContentHeader,
 			DefaultLayout
+		},
+		computed: {
+			...mapGetters({
+				getTokens: 'getTokens'
+			})
 		}
 	};
 
