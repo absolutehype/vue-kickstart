@@ -2,7 +2,7 @@ import Vue from 'vue';
 import OfsMenu from '@oneflow/ofs-vue-layout';
 import BootstrapVue from 'bootstrap-vue';
 import '@oneflow/ofs-vue-layout/dist/index.css';
-import store from './vuex';
+import store, { i18n } from './vuex';
 import router, { menuStructure } from './router';
 import App from './App';
 
@@ -19,6 +19,7 @@ store.dispatch('menu/updateMenu', {
 
 /* eslint-disable no-new */
 new Vue({
+	i18n,
 	el: '#app',
 	router,
 	store,
