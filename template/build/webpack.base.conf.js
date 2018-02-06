@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const utils = require('./utils')
-const config = require('../../../webpack-vue/config/index')
+const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 
 function resolve (dir) {

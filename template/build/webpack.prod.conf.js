@@ -2,7 +2,7 @@
 const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
-const config = require('../../../webpack-vue/config/index')
+const config = require('../config')
 const merge = require('webpack-merge')
 const baseWebpackConfig = require('./webpack.base.conf')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -12,8 +12,8 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const env = process.env.NODE_ENV === 'testing'
-  ? require('../../../webpack-vue/config/test.env')
-  : require('../../../webpack-vue/config/prod.env')
+  ? require('../config/test.env')
+  : require('../config/prod.env')
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -48,7 +48,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: utils.assetsPath('css/[name].[contenthash].css'),
       // Setting the following option to `false` will not extract CSS from codesplit chunks.
       // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
-      // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`,
+      // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`, 
       // increasing file size: https://github.com/vuejs-templates/webpack/issues/1110
       allChunks: true,
     }),
