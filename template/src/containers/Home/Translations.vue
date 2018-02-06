@@ -12,10 +12,10 @@
 			</b-dropdown>
 			<br>
 			<br>
-			<p>Name:<b> {{ $t('Name') }}</b></p>
-			<p>Weight Unit:<b> {{ $t('Weight Unit') }}</b></p>
-			<p>Timezone:<b> {{ $t('Timezone') }}</b></p>
-			<p>Print Shop:<b> {{ $t('Print Shop') }}</b></p>
+			<p>Name:<b v-t="'Name'"></b></p>
+			<p>Weight Unit:<b v-t="'Weight Unit'"></b></p>
+			<p>Timezone:<b v-t="'Timezone'"></b></p>
+			<p>Print Shop:<b v-t="'Print Shop'"></b></p>
 			Currency:
 			<b><span v-t="'Currency'"></span></b>
 			<br>
