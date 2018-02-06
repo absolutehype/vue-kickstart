@@ -9,7 +9,7 @@
 
 	export default {
 		created() {
-			// this.setLanguage({ lang: this.lang });
+			this.setLanguage({ lang: this.lang });
 		},
 		methods: {
 			...mapActions(['setLanguage', 'getLanguage'])
