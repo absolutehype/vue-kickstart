@@ -1,17 +1,20 @@
-import * as actions from './actions';
+import createActions from './actions';
 import * as mutations from './mutations';
 import * as getters from './getters';
 
-const state = {
-	lang: JSON.parse(window.localStorage.getItem('vuex')).lang.lang || 'en-GB',
-	tokens: []
-};
+export default function (store, $i18n) {
+	const state = {
+		lang: JSON.parse(window.localStorage.getItem('vuex')).lang.lang || 'en-GB',
+		tokens: []
+	};
 
-const langStore = {
-	state,
-	getters,
-	actions,
-	mutations
-};
+	const langStore = {
+		namespaced: true,
+		state,
+		actions: createActions($i18n),
+		mutations,
+		getters
+	};
 
-export default langStore;
+	store.registerModule('lang', langStore);
+}

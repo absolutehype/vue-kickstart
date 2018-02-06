@@ -34,14 +34,9 @@
 
 	export default {
 		methods: {
-			...mapActions(['setLanguage', 'getLanguage']),
+			...mapActions('lang', ['setLanguage']),
 			pickLang(lang) {
-				return this.setLanguage({ lang }).then(() => {
-					this.$i18n.locale = lang;
-					this.$i18n.setLocaleMessage(lang, this.getTokens);
-					document.querySelector('html').setAttribute('lang', lang);
-
-				});
+				return this.setLanguage({ lang });
 			},
 			displayError() {
 				const errorMessage = this.$i18n.t('Error message');
