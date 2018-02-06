@@ -28,50 +28,25 @@
 
 <script>
 	import { mapActions } from 'vuex';
-	import axios from 'axios';
 	import { ContentHeader } from '@oneflow/ofs-vue-layout';
 	import DefaultLayout from '../../components/DefaultLayout';
 
 
 	export default {
 		methods: {
-			...mapActions(['setLanguage']),
+			...mapActions(['setLanguage', 'getLanguage']),
 			pickLang(lang) {
+				return this.setLanguage({ lang }).then(() => {
+					this.$i18n.locale = lang;
+					this.$i18n.setLocaleMessage(lang, this.$store.state.lang.tokens);
+					document.querySelector('html').setAttribute('lang', lang);
 
-				this.loadLanguageAsync(lang);
+				});
 			},
 			displayError() {
 				const errorMessage = this.$i18n.t('Error message');
 				const errorTitle = this.$i18n.t('error');
 				window.alert(`${errorTitle}: ${errorMessage}`);
-			},
-			setI18nLanguage(lang) {
-				// this.$i18n.locale = lang;
-				// document.querySelector('html').setAttribute('lang', lang);
-				return lang;
-			},
-
-			loadLanguageAsync(lang) {
-				// return axios.get(`https://s3-eu-west-1.amazonaws.com/oneflow-public/locales/production/${lang}.json`, {
-				// 	params: {
-				// 		headers: {
-				// 			'Content-Type':
-				// 				'application/x-www-form-urlencoded'
-				// 		}
-				// 	}
-				// }).then(msgs => {
-				return this.setLanguage({ lang }).then(e => {
-					this.$i18n.locale = lang;
-					console.log('store is ', this.$store.state);
-					this.$i18n.setLocaleMessage(lang, this.$store.state.lang.tokens);
-					document.querySelector('html').setAttribute('lang', lang);
-
-				});
-				// 	return this.setI18nLanguage(lang);
-				// // });
-				// return Promise.resolve(this.setI18nLanguage(lang));
-				//
-				// return Promise.resolve(lang);
 			}
 		},
 		components: {

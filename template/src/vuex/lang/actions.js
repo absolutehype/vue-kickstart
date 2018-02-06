@@ -16,9 +16,7 @@ export const setLanguage = ({ commit }, { lang }) => {
 };
 
 export const getLanguage = ({ commit }) => {
-	console.log('inside actions');
 	const localLang = JSON.parse(window.localStorage.getItem('vuex')).lang.lang;
-	const lang = localLang || 'en';
-	commit('SET_LANGUAGE', { localLang });
-	// commit('SET_TOKENS', { localTokens });
+	const lang = localLang || 'en-GB';
+	commit('SET_LANGUAGE', { lang: localLang });
 };

@@ -10,10 +10,15 @@
 	export default {
 		created() {
 			this.getLanguage();
-			this.$i18n.locale = this.$store.state.lang.lang;
+			const lang = this.$store.state.lang.lang;
+			this.setLanguage({ lang }).then(() => {
+				this.$i18n.locale = lang;
+				this.$i18n.setLocaleMessage(lang, this.$store.state.lang.tokens);
+				document.querySelector('html').setAttribute('lang', lang);
+			});
 		},
 		methods: {
-			...mapActions(['getLanguage'])
+			...mapActions(['setLanguage', 'getLanguage'])
 		},
 		computed: {
 			...mapGetters({
