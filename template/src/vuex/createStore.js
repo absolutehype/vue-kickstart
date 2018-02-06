@@ -7,7 +7,7 @@ const createStore = () => {
 	Vue.use(Vuex);
 	return new Vuex.Store({
 		modules: { lang: langStore },
-		plugins: [createPersistedState({ paths: ['lang'] })]
+		plugins: [createPersistedState({ paths: ['lang.lang'] })]
 	});
 };
 

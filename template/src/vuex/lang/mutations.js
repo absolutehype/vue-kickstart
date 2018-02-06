@@ -1,10 +1,10 @@
 export const SET_LANGUAGE =
-	(state, { language }) => {
-		state.lang = language;
+	(state, { lang }) => {
+		state.lang = lang;
 	};
 
 export const SET_TOKENS =
-	(state, { language }) => {
-		state.tokens = [];
-		console.log(language);
+	(state, { tokens }) => {
+		state.tokens = tokens;
+		console.log('state tokens are ', state.tokens);
 	};

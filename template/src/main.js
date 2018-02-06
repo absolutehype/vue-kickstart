@@ -49,7 +49,6 @@ export function loadLanguageAsync(lang) {
 
 router.beforeEach((to, from, next) => {
 	const lang = 'es-ES';
-	console.log('to.params are ', to.params.lang);
 	loadLanguageAsync(lang).then(() => next());
 });
 
@@ -57,6 +56,7 @@ const i18n = new VueI18n({
 	locale: 'en', // set locale
 	messages: messages
 });
+
 
 /* eslint-disable no-new */
 new Vue({
