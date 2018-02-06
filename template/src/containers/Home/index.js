@@ -1,6 +1,7 @@
 import Home from './Home';
 import HpModePage from './HpModePage';
 import NewPage from './NewPage';
+import Translations from './Translations';
 
 const routes = [
 	{
@@ -23,6 +24,11 @@ const routes = [
 				name: 'newPage',
 				path: '/new-page',
 				component: NewPage
+			},
+			{
+				name: 'translations',
+				path: '/translations',
+				component: Translations
 			}
 		]
 	}

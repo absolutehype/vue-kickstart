@@ -5,13 +5,20 @@
 </template>
 
 <script type="text/javascript">
-	import { mapGetters } from 'vuex';
-
+	import { mapActions, mapGetters } from 'vuex';
+	
 	export default {
+		created() {
+			this.setLanguage({ lang: this.lang });
+		},
+		methods: {
+			...mapActions('lang', ['setLanguage'])
+		},
 		computed: {
 			...mapGetters({
 				activeTopItem: 'menu/activeTopItem',
-				activeSubmenu: 'menu/activeSubmenu'
+				activeSubmenu: 'menu/activeSubmenu',
+				lang: 'lang/lang'
 			})
 		}
 	};
