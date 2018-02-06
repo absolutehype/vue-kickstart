@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+/* eslint-disable arrow-body-style */
 export const setLanguage = ({ commit }, { lang }) => {
 	return axios.get(`https://s3-eu-west-1.amazonaws.com/oneflow-public/locales/production/${lang}.json`, {
 		params: {
@@ -18,5 +19,5 @@ export const setLanguage = ({ commit }, { lang }) => {
 export const getLanguage = ({ commit }) => {
 	const localLang = JSON.parse(window.localStorage.getItem('vuex')).lang.lang;
 	const lang = localLang || 'en-GB';
-	commit('SET_LANGUAGE', { lang: localLang });
+	commit('SET_LANGUAGE', { lang });
 };
