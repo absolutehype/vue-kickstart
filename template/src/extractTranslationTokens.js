@@ -9,7 +9,7 @@ function processFile(checkPath) {
 
 		const contents = fs.readFileSync(path.join(__dirname, checkPath)).toString();
 		// Regex detecting uses of $t. function, v-t directive and $i18n.t function
-		const matches = contents.match(/(\$t\('*[^"{}=]*'\)|v-t=*"[^"{}=]*"|\$i18n\.t\('*[^"{}=]*')/g);
+		const matches = contents.match(/(\$t\('*[^"{$}=]*'\)|v-t=*"[^"{$}=]*"|\$i18n\.t\('*[^"{$}=]*')/g);
 
 
 		if (matches) {
