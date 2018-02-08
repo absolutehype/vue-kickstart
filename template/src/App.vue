@@ -6,10 +6,10 @@
 
 <script type="text/javascript">
 	import { mapActions, mapGetters } from 'vuex';
-	
+
 	export default {
 		created() {
-			this.setLanguage({ lang: this.lang });
+			this.setLanguage({ lang: this.lang || 'en-GB' });
 		},
 		methods: {
 			...mapActions('lang', ['setLanguage'])
