@@ -11,11 +11,11 @@
 		"lint": "eslint --ext .js,.vue src test/unit/specs"
 	},
 	"dependencies": {
-		"@oneflow/ofs-vue-layout": "1.1.48",
-		"@oneflow/ofs-vuex-crud": "1.0.8",
+		"@oneflow/ofs-vue-layout": "1.1.67",
+		"@oneflow/ofs-vuex-crud": "1.1.4",
 		"axios": "0.17.1",
 		"bootstrap-vue": "2.0.0-rc.1",
-		"vue": "2.5.13",
+		"vue": "2.5.16",
 		"vue-i18n": "7.4.2",
 		"vue-router": "3.0.1",
 		"vuex": "3.0.1",
@@ -66,7 +66,7 @@
 		"vue-jest": "^1.0.2",
 		"vue-loader": "^13.3.0",
 		"vue-style-loader": "^3.0.1",
-		"vue-template-compiler": "2.5.13",
+		"vue-template-compiler": "2.5.16",
 		"webpack": "^3.6.0",
 		"webpack-bundle-analyzer": "^2.9.0",
 		"webpack-dev-server": "^2.9.1",
