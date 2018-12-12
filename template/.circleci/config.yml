@@ -24,22 +24,10 @@ jobs:
           name: build
           command: |
             npm run build
-    # - run:
-    #     name: serve
-    #     command: |
-    #       sudo npm install -g serve
-    #       serve -p 3001 dist/
-    #     background: true
       - run:
           name: test
           command: |
             npm run test
-    # skip until nightwatch vulnerabilities are sorted
-    #   - run:
-    #       name: audit
-    #       command: |
-    #         sudo npm install -g npm
-    #         npm audit
       - save_cache:
           key: v1-source-{{ .Environment.CIRCLE_SHA1 }}
           paths:
