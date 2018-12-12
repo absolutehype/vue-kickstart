@@ -29,10 +29,18 @@ module.exports = {
 		'arrow-parens': [2, 'as-needed'],
 		'linebreak-style': 0,
 		'padded-blocks': 0,
-		indent: [1, 'tab'],
-		'no-underscore-dangle': [2, {allow: ['_id', '__v']}],
-		'no-param-reassign': [2, {props: false}],
-		'new-cap': [2, {capIsNewExceptions: ['Router', 'ObjectId']}],
+		indent: [1, 'tab', {
+			"SwitchCase": 1
+		}],
+		'no-underscore-dangle': [2, {
+			allow: ['_id', '__v']
+		}],
+		'no-param-reassign': [2, {
+			props: false
+		}],
+		'new-cap': [2, {
+			capIsNewExceptions: ['Router', 'ObjectId']
+		}],
 		'no-tabs': 0,
 		'max-len': [1, 120], // extended
 		'no-plusplus': 0, // disabled
@@ -49,5 +57,21 @@ module.exports = {
 		// allow debugger during development
 		'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
 
+	},
+	globals: {
+		"jest": true,
+		"expect": true,
+		"mockFn": true,
+		"config": true,
+		"afterEach": true,
+		"beforeEach": true,
+		"describe": true,
+		"it": true,
+		"runs": true,
+		"waitsFor": true,
+		"pit": true,
+		"require": true,
+		"xdescribe": true,
+		"xit": true
 	}
 }
