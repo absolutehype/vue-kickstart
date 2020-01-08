@@ -1,3 +1,7 @@
+# Deprecated
+
+Should now use https://github.com/Oneflow/kickstart-vue
+
 # vue-kickstart
 
 > A full-featured Oneflow vue setup with hot-reload, lint-on-save, unit testing & css extraction.
